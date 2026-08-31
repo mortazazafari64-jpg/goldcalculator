@@ -1,6 +1,6 @@
 [app]
 
-# نام برنامه (بهتر است انگلیسی باشد)
+# نام برنامه
 title = Gold Calculator
 
 # نام package
@@ -22,14 +22,15 @@ requirements = python3,kivy,kivymd
 # حالت نمایش
 orientation = portrait
 
-# معماری Android (برای گوشی‌های ۶۴ بیتی جدید)
+# معماری Android
 android.archs = arm64-v8a
 
 # نسخه NDK (تغییر داده شد)
 android.ndk = 25b
 
-# نسخه SDK (اضافه شد)
+# نسخه SDK
 android.api = 33
+android.minapi = 21
 
 # مجوز اینترنت
 android.permissions = INTERNET
@@ -37,6 +38,9 @@ android.permissions = INTERNET
 # قبول خودکار licenseهای SDK
 android.accept_sdk_license = True
 
+# تنظیمات اضافی برای جلوگیری از خطای apt
+android.gradle_repository = maven { url 'https://maven.google.com' }
+android.bootstrap = sdl2
 
 [buildozer]
 
