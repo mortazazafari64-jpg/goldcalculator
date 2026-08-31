@@ -19,7 +19,7 @@ jobs:
           buildozer_version: stable
 
       - name: Upload artifacts (APK)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4  # <-- اینجا تغییر داده شد
         with:
           name: package
           path: ${{ steps.buildozer.outputs.filename }}
